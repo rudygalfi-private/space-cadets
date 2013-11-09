@@ -1,0 +1,32 @@
+display nemesis counter / turn number at all times
+autoplay mode: will automatically time phases continusouly: start clocks, move to next phases, etc.
+  - can be turned off at any time; if re-enabled, doesn't take effect until first user action (starting a clock, moving to new phase, etc.)
+
+nemesis track: show full track (-2 to 6) and color coded. indicate position on track with a square containing turn number:
+
+(-2) (-1) ( 0) ( 1) ( 2) ( 3) ( 4) ( 5) ( 6)
+                                    ^
+                                  [ 1 ]
+
+discussion
+- 3:00 timer
+- reduce time to 2:00 for comm breakdown
+- pause, go, reset (changes to "confirm reset?" on tap, then actually resets on second tap)
+
+prepare stations
+
+action
+- 30 sec timer
+- ability to add 30 secs
+
+music
+- winning lines / wrong - for when core breach is incurred
+- millionaire / double dip or wise men cue for when core breach is fixed
+- winning lines / time up for when action phase ends without fixing core breach (LOSS)
+- winning lines / study for 3:00 discussion phase
+- extra time (wise men time with lead in) - FOR ALL 30 second timers
+- millionaire / phone a friend end early for cutting phase short
+- millionaire / using double dip for all 30 second time extensions
+- winning lines / think 1 or 2 for enemy phase
+- millioniare / full open (SM) - truncated at end for getting phase set up
+- ??? for when players WIN (jump phase)

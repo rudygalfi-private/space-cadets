@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<title>Space Cadets</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script src="actions.js"></script>
+		<script>
+			$(document).ready(function()
+				{
+				$("#btn1").click(function(){
+					$("#captain_icon").animate({height:"190px", width:"190px"});
+				});
+				$("#btn2").click(function(){
+					$("#captain_icon").animate({height:"128px", width:"128px"});
+				});
+				$("#btn3").click(function(){
+					$("#clockRing").animate({height:"+=50px", width:"+=50px"});
+				});
+				$("#btn4").click(addExtraTime);
+				$("#animate").click(function(){
+					$("#phaseCircleContainer").animate({top:"-=200px"});
+					$("#phaseCircleContainer").animate({top:"+=200px"});
+				});
+			});
+		</script>
+	</head>
+	<body onload="init()">
+		<button id="animate">Move!</button>
+		<div id="leftBlock"></div>
+		<div id="rightBlock"></div>
+		<div id="topBlock"></div>
+		<div id="bottomBlock"></div>
+		<div id="phaseCircleContainer">
+			<canvas id="phaseCircle"></canvas>
+		</div>
+		<div id="phaseLine"></div>
+		<div id="phaseNumber"></div>
+		<div id="clockRingContainer">
+			<canvas id="clockRing"></canvas>
+		</div>
+		<div id="clockValue"></div>
+		<div id="addExtraTimeButton"></div>
+		<div id="prevPhase">Prev</div>
+		<div id="nextPhase">Next</div>
+	</body>
+</html>

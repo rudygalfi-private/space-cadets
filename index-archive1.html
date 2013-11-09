@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<title>Space Cadets</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script src="actions.js"></script>
+		<script>
+			$(document).ready(function()
+				{
+				$("#btn1").click(function(){
+					$("#captain_icon").animate({height:"190px", width:"190px"});
+				});
+				$("#btn2").click(function(){
+					$("#captain_icon").animate({height:"128px", width:"128px"});
+				});
+				$("#btn3").click(function(){
+					$("#clockCanvas").animate({height:"+=50px", width:"+=50px"});
+				});
+				$("#btn4").click(addExtraTime);
+			});
+		</script>
+	</head>
+	<body onload="init()">
+		<div id="displayArea">
+			<div id="phase">
+				<canvas id="phaseCircle"></canvas>
+			</div>
+			<p>This is the first paragraph in the body of your new HTML file!</p>
+			<p>
+				<button onclick="toggleAudio()" type="button">Toggle</button>
+				<button id="btn1">Big!</button>
+				<button id="btn2">Small!</button>
+				<button id="btn3">Move!</button>
+				<button id="btn4">Extra Time!</button>
+			</p>
+			<audio id="reveal">
+				<source src="audio/reveal.mp3" type="audio/mpeg">
+				Your browser does not support HTML5 audio.
+			</audio>
+			<audio id="wonderwall">
+				<source src="audio/wonderwall.mp3" type="audio/mpeg">
+				Your browser does not support HTML5 audio.
+			</audio>
+			<audio id="wrong">
+				<source src="audio/wrong.mp3" type="audio/mpeg">
+				Your browser does not support HTML5 audio.
+			</audio>
+			<canvas id="clockCanvas" width="480" height="480" style="position:absolute; left:0; right:0; margin-left:auto; margin-right:auto;"></canvas>
+			<p style="visibility:hidden;">
+				<img id="captain_icon" src="icons/stations/captain.png" height="128px" width="128px" style="position:relative;" />
+				<img src="icons/stations/engineering.png" height="128px" width="128px" />
+				<img src="icons/stations/sensors.png" height="128px" width="128px" />
+				<img src="icons/stations/weapons.png" height="128px" width="128px" />
+				<img src="icons/stations/helm.png" height="128px" width="128px" />
+				<img src="icons/stations/shields.png" height="128px" width="128px" />
+				<img src="icons/stations/tractorbeam.png" height="128px" width="128px" />
+				<img src="icons/stations/jumpdrive.png" height="128px" width="128px" />
+				<img src="icons/stations/damagerepair.png" height="128px" width="128px" />
+				<img src="icons/stations/corebreach.png" height="128px" width="128px" />
+			</p>
+		</div>
+	</body>
+</html>
